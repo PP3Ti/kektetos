@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap')
+  
+$logo-darkblue: rgb(57, 49, 133)
+$logo-lightblue: rgb(0, 160, 227)
+$light: #F6F4EB
+$light-blue: #91C8E4
+$medium-blue: #749BC2
+$dark-blue: #081822
+
+* 
+  margin: 0
+  padding: 0
+  font-family: inter, sans-serif
+
+@media (min-width: 350px) 
+  html
+    font-size: 5px
+  .header-logo
+    height: 32px
+
+@media (min-width: 810px) 
+  html
+    font-size: 10px
+  .header-logo
+    height: 48px
+
+@media (min-width: 1200px) 
+  html
+    font-size: 14px
+  .header-logo
+    height: 64px
+
+#root 
+  height: 100dvh
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+
+.wrapper
+  display: flex
+  flex-direction: column
+  justify-content: center
+  max-width: 1920px
+  
+header
+  display: flex
+  position: sticky
+  top: 0
+  z-index: 99
+  justify-content: space-between
+  align-items: center
+  background-color: white
+  color: $dark-blue
+  padding-block: 1rem
+  padding-inline: 3rem
+
+  .navbar
+    display: flex
+    gap: 1.5rem
+    list-style: none
+
+    li
+      font-size: 2rem
+      font-weight: 600
+
+    li:hover
+      text-decoration: underline
+      scale: 1.1
+
+.body
+  display: flex
+  flex-direction: column
+
+.hero
+  height: 50rem
+  background: $light
+  position: relative
+
+  .hero-image
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%)
+    height: 100%
+
+  .hero-text
+    background-color: rgba($dark-blue, 0.8)
+    height: 100%
+    width: 100%
+    position: absolute
+    color: $light
+
+    h1
+      position: absolute
+      width: 100%
+      text-align: center
+      top: 30%
+      font-size: 6rem
+      font-weight: 600
+
+    h4
+      position: absolute
+      width: 100%
+      text-align: center
+      top: 22%
+      font-size: 1.8rem
+      font-weight: 500
+
+.about, .amenities
+  display: flex
+  justify-content: center
+
+  .about-wrapper, .amenities-wrapper
+    align-self: center
+    width: 60%
+    padding: 4rem
+
+    .about-title, .amenities-title
+      font-weight: 600
+      font-size: 4rem
+      margin-block-end: 2rem
+      text-decoration: underline
+
+    .about-text, .amenities-text
+      display: flex
+      justify-content: space-around
+      font-weight: 300
+      font-size: 2rem
+
+.img-display
+  height: 40rem
+
+.gallery
+  display: flex
+  justify-content: center
+
+  .gallery-wrapper
+    width: 100%
+  
+  .gallery-title
+    justify-self: center
+    font-weight: 600
+    font-size: 4rem
+    padding-inline-start: 20%
+    padding-block: 2rem
+    text-decoration: underline
+    background-color: $light
+
+  .image-slider
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $light
+    width: 100%
+
+    img
+      max-height: 50rem
+
+    button
+      border: none
+      border-radius: 50%
+      padding: 1rem
+      background-color: rgba($light, 0.4)
+      display: grid
+      place-content: center
+      
+    button:hover
+      scale: 1.01
+      box-shadow: 0 0 4px 0 #121212
+
+    .prev-button
+      transform: translate(100%)
+      position: absolute
+      left: 0
+      img
+        transform: translate(-10%)
+
+    .next-button
+      transform: translate(-100%)
+      position: absolute
+      right: 0
+      img
+        transform: translate(10%)
+
+    .icon
+      height: 3rem
+
+
+  
+
+
+   
