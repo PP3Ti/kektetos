@@ -5,8 +5,7 @@ export default function ImgDisplay() {
     <div className='img-display' 
           style={{ backgroundImage: `url(${view})`,
                    backgroundRepeat: 'no-repeat', 
-                   backgroundSize: 'cover', 
-                   backgroundPositionY: '-30rem' 
+                   backgroundSize: 'cover'
                 }}>
     </div>
   )

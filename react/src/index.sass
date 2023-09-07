@@ -3,7 +3,7 @@
 $logo-darkblue: rgb(57, 49, 133)
 $logo-lightblue: rgb(0, 160, 227)
 $light: #F6F4EB
-$light-blue: #91C8E4
+$light-blue: #b8dff3
 $medium-blue: #749BC2
 $dark-blue: #081822
 
@@ -17,18 +17,34 @@ $dark-blue: #081822
     font-size: 5px
   .header-logo
     height: 32px
+  .hero
+    height: 40rem
+  .gallery-title
+    padding-inline-start: 12%
 
 @media (min-width: 810px) 
   html
     font-size: 10px
   .header-logo
     height: 48px
+  .hero
+    height: 40rem 
+  .gallery-title
+    padding-inline-start: 12%
 
 @media (min-width: 1200px) 
   html
     font-size: 14px
   .header-logo
     height: 64px
+  .img-display
+    background-position-y: -30rem
+  .hero
+    height: 60rem 
+  .reviews-wrapper, .amenities-wrapper, .about-wrapper
+    max-width: 60%
+  .gallery-title
+    padding-inline-start: 20%
 
 #root 
   height: 100dvh
@@ -50,10 +66,11 @@ header
   z-index: 99
   justify-content: space-between
   align-items: center
-  background-color: white
+  background-color: $light-blue
   color: $dark-blue
   padding-block: 1rem
   padding-inline: 3rem
+  border-block-end: 2px solid $dark-blue
 
   .navbar
     display: flex
@@ -73,7 +90,7 @@ header
   flex-direction: column
 
 .hero
-  height: 50rem
+  max-height: 60rem
   background: $light
   position: relative
 
@@ -107,13 +124,33 @@ header
       font-size: 1.8rem
       font-weight: 500
 
+.back-to-top
+  margin-inline-start: auto
+  margin-inline-end: 5%
+  max-width: 4rem
+  position: sticky
+  top: 90%
+  border: 1px solid rgba($logo-darkblue, 0.2)
+  border-radius: 50%
+  background-color: $light
+  padding: 0.5rem
+
+  img
+    max-width: 100%
+
+.back-to-top:hover
+  box-shadow: 0 0 5px 0 rgba($dark-blue, 0.5)
+  scale: 1.1
+
 .about, .amenities
   display: flex
   justify-content: center
+  margin-block: 2rem
+  position: relative
 
   .about-wrapper, .amenities-wrapper
     align-self: center
-    width: 60%
+    width: 75%
     padding: 4rem
 
     .about-title, .amenities-title
@@ -129,7 +166,7 @@ header
       font-size: 2rem
 
 .img-display
-  height: 40rem
+  min-height: 50rem
 
 .gallery
   display: flex
@@ -142,8 +179,7 @@ header
     justify-self: center
     font-weight: 600
     font-size: 4rem
-    padding-inline-start: 20%
-    padding-block: 2rem
+    padding-block: 3rem
     text-decoration: underline
     background-color: $light
 
@@ -153,6 +189,7 @@ header
     align-items: center
     background-color: $light
     width: 100%
+    padding-block-end: 3rem
 
     img
       max-height: 50rem
@@ -175,6 +212,7 @@ header
       left: 0
       img
         transform: translate(-10%)
+        max-height: 2rem
 
     .next-button
       transform: translate(-100%)
@@ -182,12 +220,54 @@ header
       right: 0
       img
         transform: translate(10%)
+        max-height: 2rem
 
-    .icon
-      height: 3rem
+.reviews
+  display: flex
+  justify-content: center
 
+  .reviews-wrapper
+    width: 75%
+    padding: 4rem
 
-  
+  .reviews-title
+    font-weight: 600
+    font-size: 4rem
+    margin-block-end: 2rem
+    text-decoration: underline
+
+  .rendered-reviews
+    display: flex
+    justify-content: space-evenly
+    gap: 2rem
+    margin-block-start: 4rem
+
+    .review
+      border: 1px solid $logo-darkblue
+      border-radius: 0.5rem
+      padding: 2rem
+      box-shadow: 0 0 12px 0 rgba($dark-blue, 0.2)
+
+    .review-top
+      display: flex
+      align-items: center
+      margin-block-end: 1rem
+
+      .reviewer-name
+        font-weight: 600
+        font-size: 2rem
+        margin-inline: 1rem
+
+      .review-date
+        margin-inline: 1rem
+
+      img
+        border-radius: 50%
+        max-height: 6rem
+
+    .review-text
+      font-weight: 300
+      font-size: 1.5rem
 
 
    
