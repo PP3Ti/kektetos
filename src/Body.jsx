@@ -5,6 +5,7 @@ import ImgDisplay from "./bodyparts/ImgDisplay"
 import Gallery from './bodyparts/Gallery'
 import Reviews from './bodyparts/Reviews'
 import BatcToTop from "./bodyparts/BactoToTop"
+import Location from './bodyparts/Location'
 
 export default function Body() {
   return (
@@ -16,6 +17,7 @@ export default function Body() {
       <Amenities />
       <Gallery />
       <Reviews />
+      <Location />
     </div>
   )
 }
