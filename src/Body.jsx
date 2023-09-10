@@ -6,6 +6,7 @@ import Gallery from './bodyparts/Gallery'
 import Reviews from './bodyparts/Reviews'
 import BatcToTop from "./bodyparts/BactoToTop"
 import Location from './bodyparts/Location'
+import Contacts from "./bodyparts/Contacts"
 
 export default function Body() {
   return (
@@ -18,6 +19,7 @@ export default function Body() {
       <Gallery />
       <Reviews />
       <Location />
+      <Contacts />
     </div>
   )
 }
