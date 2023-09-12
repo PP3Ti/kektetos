@@ -51,9 +51,9 @@ export default function Reviews() {
 
   return (
     <div className="reviews">
-      <div className="reviews-wrapper">
+      <div className="reviews-wrapper component-wrapper">
         <h1 className="reviews-title">
-          Rolunk mondtak
+          Rólunk mondták
         </h1>
         <div className='rendered-reviews'>
           {renderedReviews}

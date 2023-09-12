@@ -27,10 +27,14 @@ export default function Header() {
     contacts.scrollIntoView({behavior: 'smooth'})
   }
 
+  function handlePricesClick() {
+    const prices = document.querySelector('.prices')
+    prices.scrollIntoView({behavior: 'smooth'})
+  }
+
   function handleLogoClick() {
     window.scrollTo({top:0, behavior:'smooth'})
   }
-
 
   return (
     <header>
@@ -40,6 +44,7 @@ export default function Header() {
         <li onClick={handleAmenitiesClick}>Szolgáltatások</li>
         <li onClick={handleGalleryClick}>Galéria</li>
         <li onClick={handleLocationClick}>Helyszín</li>
+        <li onClick={handlePricesClick}>Árak</li>
         <li onClick={handleContactsClick}>Kapcsolat</li>
       </ul>
     </header>

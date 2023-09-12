@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className="about">
-      <div className="about-wrapper">
+      <div className="about-wrapper component-wrapper">
         <h1 className="about-title">Rólunk</h1>
         <p className="about-text">
           Menekülj el a mi bájos hétvégi házunkba, egy nyugodt menedékbe, amelyet a természet szívében találsz. 

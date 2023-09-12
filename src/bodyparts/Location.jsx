@@ -15,7 +15,7 @@ export default function Location() {
   
   return (
     <div className="location">
-      <div className="location-wrapper">
+      <div className="location-wrapper component-wrapper">
         <h1 className="location-title">Helyszín</h1>
         <p className='location-text'>
           TODO TEXT

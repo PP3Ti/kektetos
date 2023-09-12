@@ -2,10 +2,10 @@
   
 $logo-darkblue: rgb(57, 49, 133)
 $logo-lightblue: rgb(0, 160, 227)
-$light: #F6F4EB
+$light: #f7fdff
 $light-blue: #b8dff3
 $medium-blue: #749BC2
-$dark-blue: #081822
+$dark-blue: #092130
 
 * 
   margin: 0
@@ -13,11 +13,16 @@ $dark-blue: #081822
   font-family: inter, sans-serif
   scroll-margin-top: 7rem
 
+
 @media (max-width: 300px) 
   html
     font-size: 4px
-  .header-logo
+  .footer-logo
     height: 24px
+  header
+    justify-content: center
+  .header-logo 
+    display: none
   .hero
     height: 40rem
   .gallery-title
@@ -28,8 +33,12 @@ $dark-blue: #081822
 @media (min-width: 301px) 
   html
     font-size: 5px
-  .header-logo
+  .footer-logo
     height: 32px
+  header
+    justify-content: center
+  .header-logo
+    display: none
   .hero
     height: 40rem
   .gallery-title
@@ -37,31 +46,42 @@ $dark-blue: #081822
   .back-to-top
     display: none
 
-@media (min-width: 810px) 
+@media (min-width: 600px)
+  html
+    font-size: 8px
+  header
+    justify-content: space-between
+  .header-logo, .footer-logo
+    display: block
+    height: 48px 
+
+@media (min-width: 800px) 
   html
     font-size: 10px
-  .header-logo
-    height: 48px
-  .hero
-    height: 40rem 
-  .gallery-title
-    padding-inline-start: 12%
+  header
+    justify-content: space-between
+  .header-logo, .footer-logo
+    display: block
+    height: 48px 
 
 @media (min-width: 1200px) 
   html
     font-size: 14px
-  .header-logo
+    background-color: $light
+  .header-logo, .footer-logo
     height: 64px
-  .img-display
-    background-position-y: -30rem
   .hero
     height: 60rem 
-  .reviews-wrapper, .amenities-wrapper, .about-wrapper, .location-wrapper, .contacts-wrapper
+  .component-wrapper
     max-width: 60%
   .gallery-title
     padding-inline-start: 20%
   .back-to-top
     display: block
+
+@media (min-width: 1700px) 
+  .img-display
+    background-position-y: -30rem
 
 #root 
   height: 100dvh
@@ -69,23 +89,28 @@ $dark-blue: #081822
   flex-direction: column
   justify-content: space-between
   align-items: center
+  background-color: $light
+
+.component-wrapper
+  border-block-end: 1px solid rgba($dark-blue, 0.1)
 
 .wrapper
   display: flex
   flex-direction: column
   justify-content: center
   max-width: 1920px
-  
+  box-shadow: 0 0 10px 0 rgba($dark-blue, 0.2)
+  background-color: $light
+
 header
   display: flex
   position: sticky
   top: 0
   z-index: 99
-  justify-content: space-between
   align-items: center
   background-color: $light-blue
   color: $dark-blue
-  padding-block: 1rem
+  padding-block: 1.5rem
   padding-inline: 3rem
   border-block-end: 2px solid $dark-blue
 
@@ -101,7 +126,7 @@ header
     li:hover
       text-decoration: underline
       scale: 1.1
-
+    
 .body
   display: flex
   flex-direction: column
@@ -144,7 +169,7 @@ header
 .back-to-top
   margin-inline-start: auto
   margin-inline-end: 5%
-  max-width: 4rem
+  max-width: 3rem
   position: sticky
   top: 90%
   border: 1px solid rgba($logo-darkblue, 0.2)
@@ -182,11 +207,12 @@ header
       font-size: 2rem
 
 .img-display
-  min-height: 50rem
+  height: 50rem
 
 .gallery
   display: flex
   justify-content: center
+  position: relative
 
   .gallery-wrapper
     width: 100%
@@ -207,9 +233,14 @@ header
     width: 100%
     padding-block-end: 3rem
 
-    img
-      max-height: 50rem
+    .gallery-image
+      height: 50rem
       max-width: 100%
+      transition-property: opacity
+      transition-duration: 0.2s
+      transition-timing-function: ease-in-out
+      will-change: opacity 
+      opacity: 0
 
     button
       border: none
@@ -218,6 +249,7 @@ header
       background-color: rgba($light, 0.4)
       display: grid
       place-content: center
+      z-index: 2
       
     button:hover
       scale: 1.01
@@ -235,6 +267,7 @@ header
       transform: translate(-100%)
       position: absolute
       right: 0
+
       img
         transform: translate(10%)
         max-height: 2rem
@@ -242,10 +275,12 @@ header
 .reviews
   display: flex
   justify-content: center
+  margin-block: 2rem
 
   .reviews-wrapper
     width: 75%
     padding: 4rem
+    border-block-start: 1px solid rgba($dark-blue, 0.1)
 
   .reviews-title
     font-weight: 600
@@ -260,6 +295,7 @@ header
     margin-block-start: 4rem
 
     .review
+      background: white
       border: 1px solid $logo-darkblue
       border-radius: 0.5rem
       padding: 2rem
@@ -289,10 +325,11 @@ header
 .location
   display: flex
   justify-content: center
+  margin-block: 2rem
 
   .location-wrapper
-    height: 50rem
     width: 75%
+    padding-inline: 4rem
 
   .location-title
     font-weight: 600
@@ -307,7 +344,7 @@ header
     margin-block: 2rem
 
   .leaflet-container
-    height: 70%
+    height: 30rem
     margin-block-end: 4rem
     z-index: 1
 
@@ -321,16 +358,46 @@ header
     font-size: 1.7rem
     text-align: center
 
-.contacts
+.contacts, .prices
   display: flex
   justify-content: center   
 
-  .contacts-wrapper
+  .contacts-wrapper, .prices-wrapper
     width: 75%
     padding: 4rem
 
-  .contacts-title
+  .contacts-title, .prices-title
     font-weight: 600
     font-size: 4rem
     margin-block-end: 2rem
     text-decoration: underline
+
+footer
+  display: flex
+  flex-direction: column
+  align-items: center
+  background: $light-blue
+  border-block-start: 2px solid $dark-blue
+  color: $dark-blue
+
+  .footer-wrapper
+     width: 75%
+     padding: 4rem
+
+  .house-info
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+  .footer-contacts
+    display: flex
+    flex-direction: column
+    gap: 0.7rem
+
+  .footer-navbar > li:hover
+    text-decoration: underline
+
+  .dev-info
+    text-align: center
+    margin-block-start: 5rem
+    font-size: 1.5rem
