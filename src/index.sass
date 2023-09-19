@@ -11,7 +11,7 @@ $dark-blue: #092130
   margin: 0
   padding: 0
   font-family: inter, sans-serif
-  scroll-margin-top: 7rem
+  scroll-margin-top: 7.5rem
 
 
 @media (max-width: 300px) 
@@ -99,7 +99,6 @@ $dark-blue: #092130
   flex-direction: column
   justify-content: center
   max-width: 1920px
-  box-shadow: 0 0 10px 0 rgba($dark-blue, 0.2)
   background-color: $light
 
 header
@@ -112,7 +111,6 @@ header
   color: $dark-blue
   padding-block: 1.5rem
   padding-inline: 3rem
-  border-block-end: 2px solid $dark-blue
 
   .navbar
     display: flex
@@ -154,7 +152,7 @@ header
       position: absolute
       width: 100%
       text-align: center
-      top: 30%
+      top: 33%
       font-size: 6rem
       font-weight: 600
 
@@ -163,7 +161,7 @@ header
       width: 100%
       text-align: center
       top: 22%
-      font-size: 1.8rem
+      font-size: 3rem
       font-weight: 500
 
 .back-to-top
@@ -195,10 +193,9 @@ header
     padding: 4rem
 
     .about-title, .amenities-title
-      font-weight: 600
+      font-weight: 400
       font-size: 4rem
       margin-block-end: 2rem
-      text-decoration: underline
 
     .about-text, .amenities-text
       display: flex
@@ -219,10 +216,9 @@ header
   
   .gallery-title
     justify-self: center
-    font-weight: 600
+    font-weight: 400
     font-size: 4rem
     padding-block: 3rem
-    text-decoration: underline
     background-color: $light
 
   .image-slider
@@ -283,10 +279,9 @@ header
     border-block-start: 1px solid rgba($dark-blue, 0.1)
 
   .reviews-title
-    font-weight: 600
+    font-weight: 400
     font-size: 4rem
     margin-block-end: 2rem
-    text-decoration: underline
 
   .rendered-reviews
     display: flex
@@ -332,31 +327,15 @@ header
     padding-inline: 4rem
 
   .location-title
-    font-weight: 600
+    font-weight: 400
     font-size: 4rem
     margin-block-end: 2rem
-    text-decoration: underline
 
-  .location-text
-    display: flex
-    font-weight: 300
-    font-size: 2rem
-    margin-block: 2rem
 
   .leaflet-container
     height: 30rem
     margin-block-end: 4rem
     z-index: 1
-
-  .leaflet-popup
-    display: flex
-
-  .leaflet-popup-tip, .leaflet-popup-tip-container
-    display: none
-
-  .leaflet-popup-content
-    font-size: 1.7rem
-    text-align: center
 
 .contacts, .prices
   display: flex
@@ -367,17 +346,68 @@ header
     padding: 4rem
 
   .contacts-title, .prices-title
-    font-weight: 600
+    font-weight: 400
     font-size: 4rem
     margin-block-end: 2rem
-    text-decoration: underline
+
+.contacts  
+  .contacts-wrapper
+    display: flex
+    flex-direction: column
+
+  .contact-telephone
+    display: flex
+    align-self: center
+    width: 60%
+    margin-block-start: 1rem
+    margin-block-end: 2rem
+    font-size: 1.5rem
+
+    img
+      height: 2rem
+
+  form
+    align-self: center
+    display: flex
+    flex-direction: column
+    width: 60%
+
+  .form-group
+    display: flex
+    justify-content: space-between
+    margin-block-end: 1rem
+    width: 100%
+  
+  input 
+    width: 45%
+    border: 1px solid $dark-blue
+    border-radius: 8px
+    padding: 0.5rem
+    font-size: 1.2rem
+
+  textarea
+    resize: none
+    border-radius: 8px
+    border: 1px solid $dark-blue
+    width: 100%
+    padding: 0.5rem
+    font-size: 1.2rem
+  
+  button
+    align-self: flex-end
+    padding: 1rem 2rem
+    background-color: $light-blue
+    border: 1px solid $dark-blue
+    border-radius: 8px
+    color: $dark-blue
+    font-size: 1.4rem
+    font-weight: 500
 
 footer
   display: flex
   flex-direction: column
   align-items: center
   background: $light-blue
-  border-block-start: 2px solid $dark-blue
   color: $dark-blue
 
   .footer-wrapper
