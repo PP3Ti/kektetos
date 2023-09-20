@@ -1,6 +1,11 @@
 import { useState } from "react"
 import phoneIcon from '../assets/phone.svg'
+import mailIcon from '../assets/mail.svg'
 import emailjs from '@emailjs/browser'
+import ReCAPTCHA from "react-google-recaptcha"
+
+emailjs.init('HNsEnbAyvSdzMdDy1') //my public key 
+const RECAPTCHA_SITE_KEY = '6LfpaTwoAAAAAC5zijzqD_vGb6-4KENb-PJ1Ycj-'  //change it
 
 export default function Contacts() {
 
@@ -11,16 +16,24 @@ export default function Contacts() {
   })
 
   const { name, email, message } = formData
+  const [recaptchaValue, setRecaptchaValue] = useState(null)
 
   function handleChange(e) {
     const { name, value } = e.target
     setFormData({ ...formData, [name]: value })
   }
 
-  emailjs.init('HNsEnbAyvSdzMdDy1') //my public key 
+  function handleRecaptchaChange(value) {
+    setRecaptchaValue(value)
+  }
 
   function handleSubmit(e) {
     e.preventDefault()
+
+    if (!recaptchaValue) {
+      alert('Please complete the reCAPTCHA verification.')
+      return
+    }
 
     const emailParams = {
       from_name: name,
@@ -50,6 +63,10 @@ export default function Contacts() {
         <div className="contact-telephone">
           <img src={phoneIcon} alt="phone icon" />
           <p>: +36 30 410 4624 </p>
+        </div>
+        <div className="contact-email">
+          <img src={mailIcon} alt="mail icon" />
+          <p>: kektetos@gmail.com</p>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -83,6 +100,12 @@ export default function Contacts() {
               required
             ></textarea>
           </div>
+          <ReCAPTCHA 
+            className="recaptcha"
+            sitekey={RECAPTCHA_SITE_KEY} 
+            onChange={handleRecaptchaChange} 
+            style={{ transform: 'scale(0.85)' }}
+          />
           <button type="submit">Küldés</button>
         </form>
       </div>

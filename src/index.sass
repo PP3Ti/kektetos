@@ -6,6 +6,7 @@ $light: #f7fdff
 $light-blue: #b8dff3
 $medium-blue: #749BC2
 $dark-blue: #092130
+$text-gray: #55626e
 
 * 
   margin: 0
@@ -20,9 +21,12 @@ $dark-blue: #092130
   .footer-logo
     height: 24px
   header
-    justify-content: center
-  .header-logo 
+    justify-content: space-around
+  #header-amenities
     display: none
+  .header-logo 
+    display: block
+    height: 16px 
   .hero
     height: 40rem
   .gallery-title
@@ -36,9 +40,12 @@ $dark-blue: #092130
   .footer-logo
     height: 32px
   header
-    justify-content: center
-  .header-logo
+    justify-content: space-around
+  #header-amenities
     display: none
+  .header-logo
+    display: block
+    height: 24px 
   .hero
     height: 40rem
   .gallery-title
@@ -51,6 +58,8 @@ $dark-blue: #092130
     font-size: 8px
   header
     justify-content: space-between
+  #header-amenities 
+    display: block
   .header-logo, .footer-logo
     display: block
     height: 48px 
@@ -58,11 +67,6 @@ $dark-blue: #092130
 @media (min-width: 800px) 
   html
     font-size: 10px
-  header
-    justify-content: space-between
-  .header-logo, .footer-logo
-    display: block
-    height: 48px 
 
 @media (min-width: 1200px) 
   html
@@ -83,6 +87,10 @@ $dark-blue: #092130
   .img-display
     background-position-y: -30rem
 
+@media (min-width: 2200px)
+  .component-wrapper
+    max-width: 50%
+
 #root 
   height: 100dvh
   display: flex
@@ -90,6 +98,7 @@ $dark-blue: #092130
   justify-content: space-between
   align-items: center
   background-color: $light
+  color: $logo-darkblue
 
 .component-wrapper
   border-block-end: 1px solid rgba($dark-blue, 0.1)
@@ -98,7 +107,6 @@ $dark-blue: #092130
   display: flex
   flex-direction: column
   justify-content: center
-  max-width: 1920px
   background-color: $light
 
 header
@@ -107,8 +115,8 @@ header
   top: 0
   z-index: 99
   align-items: center
-  background-color: $light-blue
-  color: $dark-blue
+  background-color: $logo-darkblue
+  color: $light
   padding-block: 1.5rem
   padding-inline: 3rem
 
@@ -202,6 +210,7 @@ header
       justify-content: space-around
       font-weight: 300
       font-size: 2rem
+      color: $text-gray
 
 .img-display
   height: 50rem
@@ -294,7 +303,8 @@ header
       border: 1px solid $logo-darkblue
       border-radius: 0.5rem
       padding: 2rem
-      box-shadow: 0 0 12px 0 rgba($dark-blue, 0.2)
+      box-shadow: 0 0 12px 0 rgba($logo-darkblue, 0.2)
+      color: $text-gray
 
     .review-top
       display: flex
@@ -355,16 +365,21 @@ header
     display: flex
     flex-direction: column
 
-  .contact-telephone
+  .contact-telephone, .contact-email
     display: flex
     align-self: center
     width: 60%
-    margin-block-start: 1rem
-    margin-block-end: 2rem
     font-size: 1.5rem
+    color: $text-gray
 
     img
       height: 2rem
+  
+  .contact-telephone 
+    margin-block: 1rem
+  
+  .contact-email
+    margin-block-end: 2rem
 
   form
     align-self: center
@@ -392,6 +407,9 @@ header
     width: 100%
     padding: 0.5rem
     font-size: 1.2rem
+
+  .recaptcha
+    align-self: center
   
   button
     align-self: flex-end
@@ -403,12 +421,15 @@ header
     font-size: 1.4rem
     font-weight: 500
 
+    &:hover
+      box-shadow: 0 0 5px 0 $dark-blue
+
 footer
   display: flex
   flex-direction: column
   align-items: center
-  background: $light-blue
-  color: $dark-blue
+  background: $logo-darkblue
+  color: $light
 
   .footer-wrapper
      width: 75%

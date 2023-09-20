@@ -41,7 +41,7 @@ export default function Header() {
       <img src={ logo } alt="logo" className='header-logo' onClick={handleLogoClick}/>
       <ul className='navbar'>
         <li onClick={handleAboutClick}>Rólunk</li>
-        <li onClick={handleAmenitiesClick}>Szolgáltatások</li>
+        <li onClick={handleAmenitiesClick} id='header-amenities'>Szolgáltatások</li>
         <li onClick={handleGalleryClick}>Galéria</li>
         <li onClick={handleLocationClick}>Helyszín</li>
         <li onClick={handlePricesClick}>Árak</li>
