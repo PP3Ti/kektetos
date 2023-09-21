@@ -43,7 +43,11 @@ export default function ImageSlider () {
           <button onClick={prevImage} className='prev-button'>
             <img src={prevLogo} alt='back' className='icon'/>
           </button>
-          <img key={currentIndex} src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} className='gallery-image'/>
+          <img key={currentIndex} 
+               src={images[currentIndex]} 
+               alt={`Image ${currentIndex + 1}`} 
+               className='gallery-image'
+              />
           <button onClick={nextImage} className='next-button'>
             <img src={nextLogo} alt='next' className='icon'/>
           </button>
