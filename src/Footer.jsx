@@ -52,7 +52,8 @@ export default function Footer() {
           </ul>
         </div>
         <div className="dev-info">
-          Copyright Kéktetős Vendégház © 2023
+          <p>Copyright Kéktetős Vendégház © 2023</p>
+          <p className='icons-attribute'>Icons by <a target="blank" href="https://icons8.com">Icons8</a></p>
         </div>
       </div>
     </footer>

@@ -6,7 +6,7 @@ $light: #f7fdff
 $light-blue: #b8dff3
 $medium-blue: #749BC2
 $dark-blue: #092130
-$text-gray: #55626e
+$text-gray: #395369
 
 * 
   margin: 0
@@ -90,6 +90,8 @@ $text-gray: #55626e
 @media (min-width: 2200px)
   .component-wrapper
     max-width: 50%
+  .gallery-title
+    padding-inline-start: 25%
 
 #root 
   height: 100dvh
@@ -200,17 +202,28 @@ header
     width: 75%
     padding: 4rem
 
-    .about-title, .amenities-title
-      font-weight: 400
-      font-size: 4rem
-      margin-block-end: 2rem
+  .about-title, .amenities-title
+    font-weight: 400
+    font-size: 4rem
+    margin-block-end: 2rem
 
-    .about-text, .amenities-text
-      display: flex
-      justify-content: space-around
-      font-weight: 300
-      font-size: 2rem
-      color: $text-gray
+  .about-text, .amenities-text
+    display: flex
+    justify-content: space-around
+    font-weight: 300
+    font-size: 2rem
+    color: $text-gray
+
+  li
+    display: flex
+    list-style: none
+    margin-block: 0.5rem
+    align-items: center
+
+  ul
+    img
+      height: 2rem
+      margin-inline: 1rem
 
 .img-display
   height: 50rem
@@ -414,15 +427,16 @@ header
   button
     align-self: flex-end
     padding: 1rem 2rem
-    background-color: $light-blue
+    background-color: $logo-darkblue
     border: 1px solid $dark-blue
     border-radius: 8px
-    color: $dark-blue
+    color: $light
     font-size: 1.4rem
     font-weight: 500
 
     &:hover
-      box-shadow: 0 0 5px 0 $dark-blue
+      box-shadow: 0 0 6px 0 $dark-blue
+      scale: 1.05
 
 footer
   display: flex
@@ -452,3 +466,10 @@ footer
     text-align: center
     margin-block-start: 5rem
     font-size: 1.5rem
+
+  .icons-attribute
+    font-size: 1rem
+
+    a
+      text-decoration: none
+      color: inherit

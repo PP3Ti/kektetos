@@ -27,7 +27,7 @@ export default function Reviews() {
 
   const renderedReviews = []
 
-  reviews.forEach(review => {
+  reviews.map(review => {
     renderedReviews.push(
       <div className='review' key={review.name}>
         <div className='review-top'>
@@ -47,7 +47,6 @@ export default function Reviews() {
       </div>
     )
   })
-
 
   return (
     <div className="reviews">
