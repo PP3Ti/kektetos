@@ -1,6 +1,6 @@
 import up from '../assets/up.png'
 
-export default function BatcToTop() {
+export default function BackToTop() {
 
   function handleClick() {
     window.scrollTo({

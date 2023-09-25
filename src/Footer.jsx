@@ -32,6 +32,11 @@ export default function Footer() {
     prices.scrollIntoView({behavior: 'smooth'})
   }
 
+  function handlePSAclick() {
+    const psa = document.querySelector('.psa')
+    psa.scrollIntoView({behavior: 'smooth'})
+  }
+
   return (
     <footer>
       <div className="footer-wrapper component-wrapper">
@@ -49,6 +54,7 @@ export default function Footer() {
             <li onClick={handleLocationClick}>Helyszín</li>
             <li onClick={handlePricesClick}>Árak</li>
             <li onClick={handleContactsClick}>Kapcsolat</li>
+            <li onClick={handlePSAclick}>Tudnivalók</li>
           </ul>
         </div>
         <div className="dev-info">
