@@ -32,6 +32,8 @@ $text-gray: #395369
     padding-inline-start: 12%
   .back-to-top
     display: none
+  .price-card
+    margin-inline: 2rem
 
 @media (min-width: 301px) 
   html
@@ -51,6 +53,8 @@ $text-gray: #395369
     padding-inline-start: 12%
   .back-to-top
     display: none
+  .price-card
+    margin-inline: 2rem
 
 @media (min-width: 600px)
   html
@@ -91,6 +95,8 @@ $text-gray: #395369
     max-width: 50%
   .gallery-title
     padding-inline-start: 25%
+  .price-card 
+    margin-inline: 3rem
 
 #root 
   height: 100dvh
@@ -276,6 +282,7 @@ header
       transform: translate(100%)
       position: absolute
       left: 0
+      
       img
         transform: translate(-10%)
         max-height: 2rem
@@ -353,6 +360,13 @@ header
     font-size: 4rem
     margin-block-end: 2rem
 
+  .location-text
+    display: flex
+    justify-content: space-around
+    font-weight: 300
+    font-size: 2rem
+    color: $text-gray
+    margin-block-end: 2rem
 
   .leaflet-container
     height: 30rem
@@ -380,7 +394,6 @@ header
     justify-content: center
     max-width: fit-content
 
-
   .price-card
     display: grid
     grid-template-rows: repeat(4, 1fr)
@@ -391,7 +404,6 @@ header
     border-radius: 8px
     max-width: fit-content
     box-shadow: 0 0 8px 0 rgba($logo-darkblue, 0.5)
-    margin-inline: 2rem
     margin-block: 1rem
 
     &:hover
@@ -508,14 +520,16 @@ header
   ol
     margin-inline-start: 2rem
   li
-    font-size: 2rem
+    font-size: 1.8rem
   h4
     font-weight: 400
     margin-top: 1.5rem
+    margin-bottom: 0.5rem
 
   .psa-text
     color: $text-gray
     font-size: 1.4rem
+
 footer
   display: flex
   flex-direction: column

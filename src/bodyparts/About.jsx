@@ -4,12 +4,12 @@ export default function About() {
       <div className="about-wrapper component-wrapper">
         <h1 className="about-title">Rólunk</h1>
         <p className="about-text">
-          Menekülj el a mi bájos hétvégi házunkba, egy nyugodt menedékbe, amelyet a természet szívében találsz. 
-          Három hangulatos hálószobával rendelkezik, tökéletes egy családi kikapcsolódáshoz vagy barátok összejöveteléhez. 
-          Az 1,5 fürdőszoba kényelmet és kényelmet biztosít, hogy mindenki saját teret találjon a pihenéshez.
-          A teljesen felszerelt konyhánk a gasztronómiai rajongókat várja. 
-          Készíts finom ételeket, készíts egy friss csésze kávét és élvezd azokat a szép teraszon, 
-          miközben élvezed a csendes környezetet. És azoknak, akik élvezik a grill sütés izgalmát, gyújtsd meg a grillezőt.
+          Családunk kisebb nagyobb megaszakításokkal az 1980-as évek óta foglalkozik lakáskiadással, 
+          mindig is fontosnak éreztük, hogy megoszthassuk másokkal azokat a nagyszerű élményeket, 
+          amelyeket ez a hely szolgáltatott nekünk az elmúlt évtizedek alatt. 
+          Reméljük önöknek is lehetősége nyílik megtapasztalni a fedett terasz alatti 
+          hajnalba nyúló beszélgetéseket, a családi bográcsozásokat és természetesen a Balaton 
+          adta pihenés lehetőségét. 
         </p>
       </div>
     </div>

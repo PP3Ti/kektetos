@@ -7,6 +7,9 @@ export default function Location() {
     <div className="location">
       <div className="location-wrapper component-wrapper">
         <h1 className="location-title">Helyszín</h1>
+        <p className='location-text'>
+          A háztól 10 perc gyalogútra van a szabadstrand, 15 percre a fesztiválok főbejárata és nagyjából 5 percre a vonatállomás és a közeli CBA.
+        </p>
         <MapContainer center={[46.879402603035295, 17.940180147095152]} zoom={15} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

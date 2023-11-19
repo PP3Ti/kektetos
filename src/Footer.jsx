@@ -53,8 +53,8 @@ export default function Footer() {
             <li onClick={handleGalleryClick}>Galéria</li>
             <li onClick={handleLocationClick}>Helyszín</li>
             <li onClick={handlePricesClick}>Árak</li>
-            <li onClick={handleContactsClick}>Kapcsolat</li>
             <li onClick={handlePSAclick}>Tudnivalók</li>
+            <li onClick={handleContactsClick}>Kapcsolat</li>
           </ul>
         </div>
         <div className="dev-info">

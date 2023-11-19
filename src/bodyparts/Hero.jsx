@@ -1,4 +1,4 @@
-import bg from '../assets/gallery/konyha2.jpg'
+import bg from '../assets/gallery/raw08.jpeg'
 
 export default function Hero() {
   return (
