@@ -11,7 +11,7 @@ export default function Prices() {
     {
       name: 'Főszezon',
       date: '07.08.-08.20.',
-      price: 'XXXX Ft/éj',
+      price: '130.000 Ft/éj',
       minimum: '3 éjszaka',
       priority: true
     },
@@ -25,7 +25,7 @@ export default function Prices() {
     {
       name: 'Előszezon / Utószezon',
       date: '06.01.-07.01. / 08.26.-09.30.',
-      price: 'XXXX Ft/éj',
+      price: '80.000 Ft/éj',
       minimum: '3 éjszaka',
       priority: false
     }
@@ -58,7 +58,8 @@ export default function Prices() {
           {renderedPriceCards}  
         </div>
         <p className="prices-additional-info">
-          9 fő esetén +15.000Ft a pótágy
+          * 9 fő esetén +15.000Ft a pótágy <br />
+          ** Az árak az adókat tartalmazzák
         </p>
       </div>
     </div>
