@@ -58,7 +58,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="dev-info">
-          <p>Copyright Kéktetős Vendégház © 2023</p>
+          <p>Copyright Kéktetős Vendégház © 2024</p>
           <p className='icons-attribute'>Icons by <a target="blank" href="https://icons8.com">Icons8</a></p>
         </div>
       </div>

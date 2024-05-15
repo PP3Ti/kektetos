@@ -1,11 +1,6 @@
 import { useState } from "react"
 import phoneIcon from '../assets/phone.svg'
 import mailIcon from '../assets/mail.svg'
-import emailjs from '@emailjs/browser'
-import ReCAPTCHA from "react-google-recaptcha"
-
-emailjs.init('HNsEnbAyvSdzMdDy1') //my public key 
-const RECAPTCHA_SITE_KEY = '6LfpaTwoAAAAAC5zijzqD_vGb6-4KENb-PJ1Ycj-'  //change it
 
 export default function Contacts() {
 
@@ -14,46 +9,11 @@ export default function Contacts() {
     email: '',
     message: '',
   })
-
   const { name, email, message } = formData
-  const [recaptchaValue, setRecaptchaValue] = useState(null)
 
   function handleChange(e) {
     const { name, value } = e.target
     setFormData({ ...formData, [name]: value })
-  }
-
-  function handleRecaptchaChange(value) {
-    setRecaptchaValue(value)
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault()
-
-    if (!recaptchaValue) {
-      alert('Please complete the reCAPTCHA verification.')
-      return
-    }
-
-    const emailParams = {
-      from_name: name,
-      from_email: email, 
-      message: message
-    }
-
-    console.log(emailParams)
-
-    emailjs
-      .send('service_t47k3b8', 'template_4mkw6sn', emailParams)
-      .then( 
-        function (response) {
-          console.log('Email sent successfully:', response)
-          setFormData({ name: '', email: '', message: '' })
-        },
-        function (error) {
-          console.error('Email send failed:', error)
-        }
-      )
   }
 
   return (
@@ -68,7 +28,7 @@ export default function Contacts() {
           <img src={mailIcon} alt="mail icon" />
           <p>: kektetos@gmail.com</p>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form name="contact" method="POST" data-netlify="true">
           <div className="form-group">
             <input 
               type="text"
@@ -100,12 +60,6 @@ export default function Contacts() {
               required
             ></textarea>
           </div>
-          <ReCAPTCHA 
-            className="recaptcha"
-            sitekey={RECAPTCHA_SITE_KEY} 
-            onChange={handleRecaptchaChange} 
-            style={{ transform: 'scale(0.85)' }}
-          />
           <button type="submit">Küldés</button>
         </form>
       </div>

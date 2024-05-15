@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap')
-  
+
 $logo-darkblue: rgb(57, 49, 133)
 $logo-lightblue: rgb(0, 160, 227)
 $light: #f7fdff
@@ -8,13 +8,13 @@ $medium-blue: #749BC2
 $dark-blue: #092130
 $text-gray: #395369
 
-* 
+*
   margin: 0
   padding: 0
   font-family: inter, sans-serif
   scroll-margin-top: 7.5rem
 
-@media (max-width: 300px) 
+@media (max-width: 300px)
   html
     font-size: 4px
   .footer-logo
@@ -23,9 +23,9 @@ $text-gray: #395369
     justify-content: space-around
   #header-amenities
     display: none
-  .header-logo 
+  .header-logo
     display: block
-    height: 16px 
+    height: 16px
   .hero
     height: 40rem
   .gallery-title
@@ -35,7 +35,7 @@ $text-gray: #395369
   .price-card
     margin-inline: 2rem
 
-@media (min-width: 301px) 
+@media (min-width: 301px)
   html
     font-size: 5px
   .footer-logo
@@ -46,7 +46,8 @@ $text-gray: #395369
     display: none
   .header-logo
     display: block
-    height: 24px 
+    height: 24px
+    cursor: pointer
   .hero
     height: 40rem
   .gallery-title
@@ -61,24 +62,24 @@ $text-gray: #395369
     font-size: 8px
   header
     justify-content: space-between
-  #header-amenities 
+  #header-amenities
     display: block
   .header-logo, .footer-logo
     display: block
-    height: 48px 
+    height: 48px
 
-@media (min-width: 800px) 
+@media (min-width: 800px)
   html
     font-size: 10px
 
-@media (min-width: 1200px) 
+@media (min-width: 1200px)
   html
     font-size: 14px
     background-color: $light
   .header-logo, .footer-logo
     height: 64px
   .hero
-    height: 60rem 
+    height: 60rem
   .component-wrapper
     max-width: 60%
   .gallery-title
@@ -86,7 +87,7 @@ $text-gray: #395369
   .back-to-top
     display: block
 
-@media (min-width: 1700px) 
+@media (min-width: 1700px)
   .img-display
     background-position-y: -30rem
 
@@ -95,10 +96,10 @@ $text-gray: #395369
     max-width: 50%
   .gallery-title
     padding-inline-start: 25%
-  .price-card 
+  .price-card
     margin-inline: 3rem
 
-#root 
+#root
   height: 100dvh
   display: flex
   flex-direction: column
@@ -135,11 +136,12 @@ header
     li
       font-size: 2rem
       font-weight: 600
+      cursor: pointer
 
     li:hover
       text-decoration: underline
       scale: 1.1
-    
+
 .body
   display: flex
   flex-direction: column
@@ -190,6 +192,7 @@ header
   background-color: $light
   padding: 0.5rem
   z-index: 99
+  cursor: pointer
 
   img
     max-width: 100%
@@ -240,7 +243,7 @@ header
 
   .gallery-wrapper
     width: 100%
-  
+
   .gallery-title
     justify-self: center
     font-weight: 400
@@ -262,7 +265,7 @@ header
       transition-property: opacity
       transition-duration: 0.2s
       transition-timing-function: ease-in-out
-      will-change: opacity 
+      will-change: opacity
       opacity: 0
 
     button
@@ -273,7 +276,7 @@ header
       display: grid
       place-content: center
       z-index: 2
-      
+
     button:hover
       scale: 1.01
       box-shadow: 0 0 4px 0 #121212
@@ -282,7 +285,7 @@ header
       transform: translate(100%)
       position: absolute
       left: 0
-      
+
       img
         transform: translate(-10%)
         max-height: 2rem
@@ -375,7 +378,7 @@ header
 
 .contacts, .prices, .psa
   display: flex
-  justify-content: center   
+  justify-content: center
 
   .contacts-wrapper, .prices-wrapper, .psa-wrapper
     width: 75%
@@ -438,7 +441,7 @@ header
       height: 100%
       width: 85%
       margin-inline: 1rem
-        
+
     .card-data-type
       &:nth-of-type(odd):not(:first-of-type)
         border-block-start: 1px solid rgba($logo-darkblue, 0.1)
@@ -451,7 +454,7 @@ header
   .prices-additional-info
     color: $text-gray
 
-.contacts  
+.contacts
   .contacts-wrapper
     display: flex
     flex-direction: column
@@ -465,10 +468,10 @@ header
 
     img
       height: 2rem
-  
-  .contact-telephone 
+
+  .contact-telephone
     margin-block: 1rem
-  
+
   .contact-email
     margin-block-end: 2rem
 
@@ -483,8 +486,8 @@ header
     justify-content: space-between
     margin-block-end: 1rem
     width: 100%
-  
-  input 
+
+  input
     width: 45%
     border: 1px solid $dark-blue
     border-radius: 8px
@@ -501,7 +504,7 @@ header
 
   .recaptcha
     align-self: center
-  
+
   button
     align-self: flex-end
     padding: 1rem 2rem
@@ -511,6 +514,7 @@ header
     color: $light
     font-size: 1.4rem
     font-weight: 500
+    cursor: pointer
 
     &:hover
       box-shadow: 0 0 6px 0 $dark-blue
@@ -538,8 +542,8 @@ footer
   color: $light
 
   .footer-wrapper
-     width: 75%
-     padding: 4rem
+    width: 75%
+    padding: 4rem
 
   .house-info
     display: flex
@@ -551,8 +555,11 @@ footer
     flex-direction: column
     gap: 0.7rem
 
-  .footer-navbar > li:hover
-    text-decoration: underline
+  .footer-navbar
+    li
+      cursor: pointer
+    li:hover
+      text-decoration: underline
 
   .dev-info
     text-align: center
