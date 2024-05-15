@@ -29,6 +29,7 @@ export default function Contacts() {
           <p>: kektetos@gmail.com</p>
         </div>
         <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />  
           <div className="form-group">
             <input 
               type="text"
